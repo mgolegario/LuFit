@@ -13,6 +13,12 @@
         android:theme="@style/Theme.LuFit"
         tools:targetApi="31">
         <activity
+            android:name=".EmailConfirm"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
