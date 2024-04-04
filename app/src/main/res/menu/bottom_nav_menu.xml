@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/casa_icon"
+        android:id="@+id/navhome"/>
+    <item android:title="Convesar"
+        android:icon="@drawable/mensagem_icone"
+        android:id="@+id/navconversar"/>
+    <item android:title="Preferências"
+        android:icon="@drawable/tres_barras_icone"
+        android:id="@+id/navpreferencias"/>
+</menu>

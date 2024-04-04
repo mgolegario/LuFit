@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreferencesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51dp"
+            android:layout_marginStart="23dp"
+            android:fontFamily="@font/lexend_semibold"
+            android:text="Ajustes"
+            android:textColor="#2E2E2E"
+            android:textSize="38sp" />
+
+        <FrameLayout
+            android:layout_width="314dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="26dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_frame_bg"
+            >
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_semibold"
+                android:text="Tema"
+                android:textColor="#2E2E2E"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_light"
+                    android:text="Claro"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_light"
+                    android:text="Escuro"
+                    android:textColor="#2E2E2E"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_light"
+                    android:text="Sistema"
+                    android:textColor="#2E2E2E"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_conta"
+            android:layout_width="314dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/rounded_frame_bg">
+
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="204dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_semibold"
+                android:text="Conta"
+                android:textColor="#2E2E2E"
+                android:textSize="22sp" />
+
+            <ImageButton
+                android:id="@+id/btn_para_conta"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="260dp"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/seta_azul" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="314dp"
+            android:layout_height="221dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/rounded_frame_bg">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_semibold"
+                android:text="Sobre"
+                android:textColor="#2E2E2E"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="60dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="-40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo1" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/lexend_semibold"
+                android:text="1.0.0"
+                android:textColor="#2E2E2E"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/lexend"
+                android:text="Copyright © 2024 Lumara Concept\nAll rights reserved"
+                android:textAlignment="center"
+                android:textColor="#2E2E2E"
+                android:textSize="15sp" />
+
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -8,6 +8,7 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +21,7 @@ public class ComecarConversa extends AppCompatActivity {
 
     TextView txt;
     TextView redirect_login;
+    Button iniciar_conversa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,15 @@ public class ComecarConversa extends AppCompatActivity {
             }
         });
 
+        iniciar_conversa = findViewById(R.id.btn_conversar1);
+
+        iniciar_conversa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ComecarConversa.this, Conversa.class);
+                startActivity(i);
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
