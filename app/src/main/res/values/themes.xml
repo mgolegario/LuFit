@@ -15,4 +15,10 @@
         <item name="android:fontFamily">@font/lexend</item>
 
     </style>
+    
+    <style name="MsgTextStyle">
+        <item name="android:background">@drawable/msg_textview</item>
+        <item name="android:fontFamily">@font/lexend_semibold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 </resources>

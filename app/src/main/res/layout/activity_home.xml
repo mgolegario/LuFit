@@ -10,31 +10,25 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="389dp"
-        android:layout_height="730dp"
+        android:layout_width="390dp"
+        android:layout_height="728dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-      >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
         android:layout_width="393dp"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-        app:menu="@menu/bottom_nav_menu"
-        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
-        app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
-        app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
-        />
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

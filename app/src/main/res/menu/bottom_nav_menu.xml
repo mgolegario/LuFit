@@ -4,7 +4,7 @@
     <item android:title="Home"
         android:icon="@drawable/casa_icon"
         android:id="@+id/navhome"/>
-    <item android:title="Convesar"
+    <item android:title="Conversar"
         android:icon="@drawable/mensagem_icone"
         android:id="@+id/navconversar"/>
     <item android:title="Preferências"
