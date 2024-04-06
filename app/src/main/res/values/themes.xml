@@ -17,7 +17,7 @@
     </style>
     
     <style name="MsgTextStyle" parent="Widget.AppCompat.TextView">
-        <item name="android:background">@drawable/msg_textview</item>
+        <item name="android:background">@drawable/user_msg_textview</item>
         <item name="android:fontFamily">@font/lexend_semibold</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>

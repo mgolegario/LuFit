@@ -64,28 +64,53 @@
 
         <FrameLayout
             android:layout_width="303dp"
-            android:layout_height="177dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
             android:background="@drawable/rounded_frame_bg">
 
+            <TextView
+                android:id="@+id/tv_peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_semibold"
+                android:maxWidth="250dp"
+                android:textSize="22sp" />
+
         </FrameLayout>
 
         <FrameLayout
             android:layout_width="303dp"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_frame_bg">
+
+            <TextView
+                android:id="@+id/tv_exercicios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_semibold"
+                android:maxWidth="250dp"
+                android:textSize="22sp" />
+
 
         </FrameLayout>
 
         <FrameLayout
             android:layout_width="303dp"
-            android:layout_height="157dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_frame_bg">
+
+            <TextView
+                android:id="@+id/tv_dieta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_semibold"
+                android:maxWidth="250dp"
+                android:textSize="22sp" />
 
         </FrameLayout>
     </LinearLayout>

@@ -2,6 +2,24 @@
     <string name="app_name">LuFit</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="login1">lufit@live.com</string>
-    <string name="senha1">1234ab</string>
+
+
+    <string name="introducao">Olá, eu sou o AquariRafa, o seu assistente na LuFit. Vamos começar? Vou fazer algumas perguntas
+        para que eu consiga achar o melhor projeto para você</string>
+    <string name="pergunta1">Primeiro me informe seu nome</string>
+    <string name="pergunta2">Agora me informe a sua altura em metros (Ex: 1,9)</string>
+    <string name="pergunta3">Por fim me informe o seu peso em kg (Ex: 65)</string>
+
+    <string name="IMCamarelo">Opa, parece que você está abaixo do peso ideal. Para corrigirmos isso, iremos começar o
+        Projeto Ganho de Peso. Assim você tem uma dieta com mais calorias e exercício físico</string>
+    <string name="IMCverde">Aí sim hein! Você está no peso ideal. Por isso o melhor projeto para você é o Projeto Verão. Você
+    enfrentará uma dieta simples com alguns exercícios físicos.</string>
+    <string name="IMClaranja">Calma aí camarada! Parece que você está com um sobrepeso. Mas não esquenta! Temos
+    o plano perfeito para solucionar isso. No Projeto Perda de Peso você terá uma dieta mais controlada, com exercício físico e cardio</string>
+    <string name="IMCvermelho">Hum. Pelos meus cálculos você está Obeso. Isso faz muito mal para sua saúde, você nem faz ideia! Por isso
+    nós criamos o Projeto Saúde, que conta com uma dieta bemmmmmm controlada, com exercício físico e cardio</string>
+
+    <string name="despedida">Agora você pode apertar o botão voltar ao lado da minha foto e conferir as informações do projeto e criar uma conta. Finalmente vou voltar para a piscina!</string>
+
+    <string name="peso"> </string>
 </resources>
