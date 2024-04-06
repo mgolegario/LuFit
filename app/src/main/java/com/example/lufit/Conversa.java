@@ -42,12 +42,10 @@ public class Conversa extends AppCompatActivity {
                 String input_usuario_string = "Olá tudo bem";
                 TextView tv_usuario;
                 tv_usuario = new TextView(Conversa.this);
+               // tv_usuario.setTextAppearance(R.style.MsgTextStyle);
                 tv_usuario.setText(input_usuario_string);
                 lv_mensagens.addView(tv_usuario);
-
-              //TextViewCompat.setTextAppearance(tv_usuario, R.style.MsgTextStyle);
             }
-
         });
 
 
