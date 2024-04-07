@@ -16,11 +16,10 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="51dp"
             android:layout_marginStart="23dp"
+            android:layout_marginTop="51dp"
             android:fontFamily="@font/lexend_semibold"
             android:text="Ajustes"
-            android:textColor="#2E2E2E"
             android:textSize="38sp" />
 
         <FrameLayout
@@ -52,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lexend_light"
                     android:text="Claro"
+                    android:textColor="#2E2E2E"
                     android:textSize="20sp" />
 
                 <RadioButton

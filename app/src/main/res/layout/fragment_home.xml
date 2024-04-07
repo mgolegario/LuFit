@@ -79,17 +79,15 @@
                 android:alpha="0.8"
                 android:fontFamily="@font/lexend_semibold"
                 android:text="Terça-feira, 26/03"
-                android:textColor="#2E2E2E"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_nome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxWidth="210dp"
                 android:fontFamily="@font/lexend_semibold"
+                android:maxWidth="210dp"
                 android:text="Olá, Usuário"
-                android:textColor="#2E2E2E"
                 android:textSize="22sp" />
 
         </LinearLayout>
@@ -137,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexend_semibold"
                 android:maxWidth="250dp"
+                android:textColor="#2E2E2E"
                 android:textSize="19sp" />
 
         </FrameLayout>
@@ -152,24 +151,27 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_exercicios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
 
-                android:fontFamily="@font/lexend_semibold"
-                android:maxWidth="290dp"
-                android:textSize="19sp" />
+             <TextView
+                 android:id="@+id/tv_exercicios"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
 
-            <Button
-                android:id="@+id/btn_exercicios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:backgroundTint="@color/lufitblue"
-                android:fontFamily="@font/lexend_semibold"
-                android:text="Ver Exercícios" />
+                 android:fontFamily="@font/lexend_semibold"
+                 android:maxWidth="290dp"
+                 android:textColor="#2E2E2E"
+                 android:textSize="19sp" />
+
+             <Button
+                 android:id="@+id/btn_exercicios"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="5dp"
+                 android:backgroundTint="@color/lufitblue"
+                 android:fontFamily="@font/lexend_semibold"
+                 android:text="Ver Exercícios"
+                 android:textColor="#FFFFFF" />
 
             </LinearLayout>
         </FrameLayout>
@@ -185,23 +187,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_dieta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/lexend_semibold"
-                android:maxWidth="290dp"
-                android:textSize="19sp" />
 
-            <Button
-                android:id="@+id/btn_dieta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/lufitblue"
-                android:fontFamily="@font/lexend_semibold"
-                android:text="Ver Dieta" />
+                <TextView
+                    android:id="@+id/tv_dieta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_semibold"
+                    android:maxWidth="290dp"
+                    android:textColor="#2E2E2E"
+                    android:textSize="19sp" />
+
+                <Button
+                    android:id="@+id/btn_dieta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/lufitblue"
+                    android:fontFamily="@font/lexend_semibold"
+                    android:text="Ver Dieta"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
         </FrameLayout>

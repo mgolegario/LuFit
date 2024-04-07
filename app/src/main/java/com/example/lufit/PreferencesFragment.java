@@ -56,7 +56,6 @@ public class PreferencesFragment extends Fragment {
             }
         });
 
-
         return view;
 
     }

@@ -52,11 +52,20 @@ public class Home extends AppCompatActivity {
                 } else if (itemId == R.id.navpreferencias){
                     preferenciasClicked();
                 }
-
+                if (itemId == R.id.navhome){
+                    return true;
+                }else if (itemId == R.id.navconversar){
+                    return true;
+            } else if (itemId == R.id.navpreferencias){
+                    return true;
+            }
                 return true;
             }
+
         });
+
         homeClicked();
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -83,5 +92,4 @@ public class Home extends AppCompatActivity {
     private void preferenciasClicked(){
         loadFragment(new PreferencesFragment());
     }
-
 }

@@ -42,7 +42,6 @@
             android:layout_marginEnd="108dp"
             android:fontFamily="@font/lexend_semibold"
             android:text="AquariRafa"
-            android:textColor="#2E2E2E"
             android:textSize="30sp" />
 
 
