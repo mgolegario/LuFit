@@ -7,41 +7,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="286dp"
-        android:layout_height="129dp"
-        android:layout_marginTop="180dp"
-        android:fontFamily="@font/lexend_black"
-        android:text="LuFit, o app ligado na sua saúde"
-        android:textSize="34sp"
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/bt_comecar"
-        android:layout_width="285dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="68dp"
-        android:backgroundTint="#5271FF"
-        android:elegantTextHeight="true"
-        android:fontFamily="@font/lexend_semibold"
-        android:text="Começar"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/logo1" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo1" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="286dp"
+            android:layout_height="129dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lexend_black"
+            android:text="LuFit, o app ligado na sua saúde"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/bt_comecar"
+            android:layout_width="285dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="#5271FF"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/lexend_semibold"
+            android:text="Começar"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

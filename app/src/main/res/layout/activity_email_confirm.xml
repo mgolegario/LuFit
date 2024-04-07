@@ -7,45 +7,45 @@
     android:layout_height="match_parent"
     tools:context=".EmailConfirm">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="305dp"
-        android:layout_height="192dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/lexend_semibold"
-        android:text="Um e-mail foi enviado para a confirmação\nda senha nova"
-        android:textAlignment="viewStart"
-        android:textSize="38sp"
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv"
-        app:srcCompat="@drawable/correct" />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="305dp"
+            android:layout_height="192dp"
+            android:fontFamily="@font/lexend_semibold"
+            android:text="Um e-mail foi enviado para a confirmação\nda senha nova"
+            android:textAlignment="viewStart"
+            android:textSize="38sp" />
 
-    <Button
-        android:id="@+id/bt_ok"
-        android:layout_width="135dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#5271FF"
-        android:elegantTextHeight="true"
-        android:fontFamily="@font/lexend_semibold"
-        android:text="OK"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/correct" />
+
+        <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="135dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#5271FF"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/lexend_semibold"
+            android:text="OK"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

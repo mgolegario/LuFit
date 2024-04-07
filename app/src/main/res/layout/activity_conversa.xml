@@ -9,20 +9,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="393dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        app:layout_constraintVertical_weight="0.55"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/relative_layout1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:id="@+id/bt_voltar"
             android:layout_width="30dp"
             android:layout_height="33dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/seta_icone" />
 
@@ -30,7 +34,6 @@
             android:id="@+id/imageView4"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             app:srcCompat="@drawable/peixe_circulo" />
 
@@ -38,8 +41,6 @@
             android:id="@+id/textView9"
             android:layout_width="176dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="108dp"
             android:fontFamily="@font/lexend_semibold"
             android:text="AquariRafa"
             android:textSize="30sp" />
@@ -49,10 +50,12 @@
 
     <RelativeLayout
         android:id="@+id/relative_layout1"
-        android:layout_width="393dp"
-        android:layout_height="605dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="4"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
@@ -68,11 +71,12 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="393dp"
-        android:layout_height="123dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.5"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relative_layout1">
 

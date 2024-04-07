@@ -7,81 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".ComecarConversa">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo1" />
-
-    <Button
-        android:id="@+id/btn_conversar1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:width="285dp"
-        android:height="74dp"
-        android:backgroundTint="#5271FF"
-        android:fontFamily="@font/lexend_semibold"
-        android:text="Conversar"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="286dp"
-        android:layout_height="215dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="37dp"
-        android:fontFamily="@font/lexend_black"
-        android:text="Aqui você é assistido pelo nosso \nespecialista, o AquariRafa"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="12dp"
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/circulo_azul" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="180dp"
-        android:layout_height="189dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/peixe" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/lexend_semibold"
-        android:text="Já tenho uma conta"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_black"
+            android:text="Aqui você é assistido pelo nosso \nespecialista, o AquariRafa"
+            android:textSize="34sp" />
 
-        android:textSize="15sp"
-        android:autoLink="all"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_conversar1" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:gravity="center"
+                app:srcCompat="@drawable/circulo_azul" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="180dp"
+                android:layout_height="189dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                app:srcCompat="@drawable/peixe" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_conversar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="285dp"
+            android:height="74dp"
+            android:backgroundTint="#5271FF"
+            android:fontFamily="@font/lexend_semibold"
+            android:text="Conversar"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autoLink="all"
+            android:fontFamily="@font/lexend_semibold"
+
+            android:text="Já tenho uma conta"
+            android:textSize="15sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
