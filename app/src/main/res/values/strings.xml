@@ -21,5 +21,256 @@
 
     <string name="despedida">Agora você pode apertar o botão voltar ao lado da minha foto e conferir as informações do projeto e criar uma conta. Finalmente vou voltar para a piscina!</string>
 
-    <string name="peso"> </string>
+
+    <string name="title1">Exercícios Projeto Ganho de Peso</string>
+    <string name="title2">Exercícios Projeto Verão</string>
+    <string name="title3">Exercícios Projeto Perda de Peso</string>
+    <string name="title4">Exercícios Projeto Saúde</string>
+
+    <string name="conteudoExer1">Dia 1: Treino de Peito e Tríceps\n\n
+
+1. Supino Reto com Barra: 4 séries de 8-10 repetições\n\n
+
+2. Supino Inclinado com Halteres: 4 séries de 10-12 repetições\n\n
+
+3. Crucifixo com Halteres: 3 séries de 12-15 repetições\n\n
+
+4. Pullover com Halteres: 3 séries de 10-12 repetições\n\n
+
+5. Flexões: 3 séries até a falha muscular\n\n
+
+6. Tríceps Pulley: 4 séries de 10-12 repetições\n\n
+
+7. Rosca Francesa com Halteres: 4 séries de 10-12 repetições\n\n
+
+8. Tríceps Coice com Halter: 3 séries de 10-12 repetições\n\n
+
+9. Tríceps Testa com Barra: 3 séries de 10-12 repetições\n\n\n
+
+Dia 2: Treino de Costas e Bíceps\n\n
+
+1. Barra Fixa (ou puxada na máquina): 4 séries de 8-10 repetições\n\n
+
+2. Remada Curvada com Barra: 4 séries de 10-12 repetições\n\n
+
+3. Pulldown na Polia Alta: 3 séries de 10-12 repetições\n\n
+
+4. Remada Unilateral com Halteres: 3 séries de 10-12 repetições\n\n
+
+5. Hiperextensões: 3 séries de 12-15 repetições\n\n
+
+6. Rosca Direta com Barra: 4 séries de 10-12 repetições\n\n
+
+7. Rosca Alternada com Halteres: 4 séries de 10-12 repetições\n\n
+
+8. Martelo com Halteres: 3 séries de 10-12 repetições\n\n
+
+9. Rosca Concentrada: 3 séries de 10-12 repetições\n\n\n
+
+Dia 3: Treino de Ombros\n\n
+
+1. Desenvolvimento Militar com Barra: 4 séries de 8-10 repetições\n\n
+
+2. Elevação Lateral com Halteres: 4 séries de 10-12 repetições\n\n
+
+3. Elevação Frontal com Halteres: 3 séries de 10-12 repetições\n\n
+
+4. Elevação Posterior com Halteres: 3 séries de 10-12 repetições\n\n
+
+5. Encolhimento de Ombros com Barra: 4 séries de 10-12 repetições\n\n\n
+
+Dia 4: Treino de Pernas\n\n
+
+1. Agachamento Livre: 4 séries de 8-10 repetições\n\n
+
+2. Leg Press: 4 séries de 10-12 repetições\n\n
+
+3. Extensora de Pernas: 3 séries de 10-12 repetições\n\n
+
+4. Flexão de Pernas (Leg Curl): 3 séries de 10-12 repetições\n\n
+
+5. Panturrilha em Pé: 4 séries de 12-15 repetições\n\n\n
+
+Dia 5: Descanso\n\n\n
+
+*Certifique-se de ajustar a carga conforme necessário e de realizar um aquecimento adequado antes de cada sessão de treino.</string>
+
+    <string name="conteudoExer2">Dia 1: Treino de Circuito (corpo inteiro)\n\n
+1. Agachamento: 3 séries de 12-15 repetições\n\n
+2. Supino com Halteres: 3 séries de 12-15 repetições\n\n
+3. Remada com Barra: 3 séries de 12-15 repetições\n\n
+4. Flexão de Pernas (Leg Curl): 3 séries de 12-15 repetições\n\n
+5. Elevação Lateral com Halteres: 3 séries de 12-15 repetições\n\n
+6. Prancha: 3 séries de 30-60 segundos\n\n\n
+
+Dia 2: Cardio\n\n
+- 30 minutos de corrida na esteira, bicicleta ergométrica ou elíptico em um ritmo moderado a intenso.\n\n\n
+
+Dia 3: Treino de Circuito (corpo inteiro)\n\n
+1. Lunges: 3 séries de 12-15 repetições por perna\n\n
+2. Pull-ups assistidos na máquina ou Lat Pulldown: 3 séries de 12-15 repetições\n\n
+3. Flexão de Braços: 3 séries de 12-15 repetições\n\n
+4. Abdominais Crunch: 3 séries de 15-20 repetições\n\n
+5. Extensão de Tríceps na Polia Alta: 3 séries de 12-15 repetições\n\n
+6. Prancha Lateral: 3 séries de 30-60 segundos por lado\n\n\n
+
+Dia 4: Cardio Intervalado\n\n
+- 10 minutos de aquecimento\n\n
+- Alternar entre 1 minuto de corrida intensa e 1 minuto de caminhada rápida por 20-30 minutos.\n\n
+- 10 minutos de desaceleração e alongamento.\n\n\n
+
+Dia 5: Treino de Circuito (corpo inteiro)\n\n
+1. Deadlift: 3 séries de 12-15 repetições\n\n
+2. Flexão de Pernas (Leg Press): 3 séries de 12-15 repetições\n\n
+3. Puxada na Máquina: 3 séries de 12-15 repetições\n\n
+4. Elevação de Quadril: 3 séries de 15-20 repetições\n\n
+5. Rosca Direta com Barra: 3 séries de 12-15 repetições\n\n
+6. Prancha com Elevação Alternada de Perna: 3 séries de 30-60 segundos\n\n\n
+
+Dia 6: Cardio\n\n
+- 45 minutos de caminhada rápida ou corrida moderada.\n\n
+
+Dia 7: Descanso\n\n\n
+
+Lembre-se de ajustar a intensidade dos exercícios de acordo com sua capacidade e condicionamento físico atual.\n\n
+
+Esse grupo deve fazer esse treino até se enquadrar nos outros projetos, ou seja, até seu IMC estar no máximo no Sobrepeso.\n\n
+</string>
+
+    <string name="title5">Dieta Projeto Ganho de Peso</string>
+    <string name="title6">Dieta Projeto Verão</string>
+    <string name="title7">Dieta Projeto Perda de Peso</string>
+    <string name="title8">Dieta Projeto Saúde</string>
+
+    <string name="conteudoDieta1">Dieta:
+
+Refeição 1: Café da manhã\n\n
+- Omelete de 3 ovos com queijo e vegetais (espinafre, tomate, cogumelos)\n\n
+- 2 fatias de pão integral\n\n
+- 1 copo de leite integral
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 35g\n\n
+- Carboidratos: 70g\n\n
+- Gorduras: 30g\n\n\n
+
+Refeição 2: Lanche da manhã\n\n
+- 1 banana\n\n
+- 1/2 xícara de aveia em flocos\n\n
+- 1 colher de sopa de manteiga de amendoim\n\n
+- 1 copo de leite de amêndoas\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 15g\n\n
+- Carboidratos: 80g\n\n
+- Gorduras: 20g\n\n\n
+
+Refeição 3: Almoço\n\n
+- 200g de frango grelhado\n\n
+- 1 xícara de arroz integral\n\n
+- Salada de folhas verdes (alface, rúcula, agrião) com azeite de oliva\n\n
+- 1 batata-doce média assada\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 50g\n\n
+- Carboidratos: 100g\n\n
+- Gorduras: 15g\n\n\n
+
+Refeição 4: Lanche da tarde\n\n
+- 1 iogurte grego natural\n\n
+- 1/2 xícara de granola\n\n
+- 1 maçã\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 10g\n\n
+- Carboidratos: 40g\n\n
+- Gorduras: 10g\n\n\n
+
+Refeição 5: Jantar\n\n
+- 250g de salmão grelhado\n\n
+- 1 xícara de quinoa cozida\n\n
+- Brócolis cozidos no vapor\n\n
+- Salada de tomate e pepino com vinagrete\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 40g\n\n
+- Carboidratos: 70g\n\n
+- Gorduras: 25g\n\n\n
+
+Refeição 6: Ceia\n\n
+- 1 copo de leite integral\n\n
+- 2 ovos mexidos\n\n
+- 1 fatia de pão integral\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 25g\n\n
+- Carboidratos: 30g\n\n
+- Gorduras: 15g\n\n\n
+
+Lembrando que essas quantidades são aproximadas e podem variar dependendo das características individuais, como metabolismo e nível de atividade física.
+</string>
+    <string name="conteudoDieta2">Refeição 1: Café da manhã\n\n
+- 2 ovos mexidos\n\n
+- 2 fatias de pão integral\n\n
+- 1 abacate pequeno\n\n
+- 1 xícara de chá verde\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 20g\n\n
+- Carboidratos: 50g\n\n
+- Gorduras: 20g\n\n\n
+
+Refeição 2: Lanche da manhã\n\n
+- 1 iogurte grego desnatado\n\n
+- 1/2 xícara de morangos\n\n
+- 1 colher de sopa de sementes de chia\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 10g\n\n
+- Carboidratos: 20g\n\n
+- Gorduras: 5g\n\n\n
+
+Refeição 3: Almoço\n\n
+- 150g de peito de frango grelhado\n\n
+- 1 xícara de quinoa cozida\n\n
+- Salada de folhas verdes (alface, rúcula, agrião) com tomate e pepino\n\n
+- 1 colher de sopa de azeite de oliva para temperar\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 30g\n\n
+- Carboidratos: 40g\n\n
+- Gorduras: 15g\n\n\n
+
+Refeição 4: Lanche da tarde\n\n
+- 1 maçã\n\n
+- 10 amêndoas\n\n
+- 1 queijo cottage pequeno\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 10g\n\n
+- Carboidratos: 20g\n\n
+- Gorduras: 10g\n\n\n
+
+Refeição 5: Jantar\n\n
+- 150g de salmão grelhado\n\n
+- 1 batata-doce média assada\n\n
+- Aspargos grelhados com limão\n\n
+- 1 xícara de brócolis cozidos no vapor\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 30g\n\n
+- Carboidratos: 40g\n\n
+- Gorduras: 15g\n\n\n
+
+Refeição 6: Ceia\n\n
+- 1 copo de leite desnatado\n\n
+- 1 scoop de proteína em pó de soro de leite\n\n\n
+
+Macronutrientes aproximados:\n\n
+- Proteínas: 25g\n\n
+- Carboidratos: 10g\n\n
+- Gorduras: 5g\n\n\n
+
+Lembrando que essas quantidades são aproximadas e podem variar dependendo das características individuais, como metabolismo e nível de atividade física.
+</string>
 </resources>

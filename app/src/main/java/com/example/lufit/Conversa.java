@@ -61,7 +61,6 @@ public class Conversa extends AppCompatActivity {
                 list.add(new RvClass(RvClass.LAYOUT_UM,textoUsuario));
 
                 contador_msg ++;
-                input_usuario.clearFocus();
                 input_usuario.setText("");
 
                 switch (contador_msg){

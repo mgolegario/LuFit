@@ -2,14 +2,20 @@ package com.example.lufit;
 
 import static android.content.Intent.getIntent;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class HomeFragment extends Fragment {
@@ -17,7 +23,16 @@ public class HomeFragment extends Fragment {
     TextView tv_nome;
     TextView tv_peso;
     TextView tv_exercicio;
+    Button btn_exercicio;
     TextView tv_dieta;
+    Button btn_dieta;
+    FragmentManager fragmentManager;
+    FrameLayout fl_btnPress;
+    LinearLayout ll_home;
+    FrameLayout fl_home;
+    TextView tv_titulo;
+    TextView tv_conteudo;
+    ImageView btn_voltar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -27,19 +42,149 @@ public class HomeFragment extends Fragment {
         tv_nome = view.findViewById(R.id.tv_nome);
         tv_peso = view.findViewById(R.id.tv_peso);
         tv_exercicio = view.findViewById(R.id.tv_exercicios);
+        btn_exercicio = view.findViewById(R.id.btn_exercicios);
         tv_dieta = view.findViewById(R.id.tv_dieta);
+        btn_dieta = view.findViewById(R.id.btn_dieta);
+
+        fl_btnPress = view.findViewById(R.id.fl_btnPress);
+        tv_titulo = view.findViewById(R.id.tv_titulo);
+        tv_conteudo = view.findViewById(R.id.tv_conteudo);
+        fl_home = view.findViewById(R.id.fl_home);
+        ll_home = view.findViewById(R.id.ll_home);
+
 
         String nome = b.getString("nome");
         tv_nome.setText("Olá, "+ nome);
 
         Float peso = b.getFloat("peso");
-        tv_peso.setText("Você está com " + peso +" kg. Sua meta é perder X kg.");
+        Float altura = b.getFloat("altura");
 
         String projeto = b.getString("projeto");
-        tv_exercicio.setText("Você está no projeto " + projeto +". Seus exercícios são:");
 
+        tv_peso.setText("Você está com " + peso +" kg e mede "+altura+" metros, siga em frente com foco e determinação nos seus objetivos!");
+        tv_exercicio.setText("Você está no Projeto " + projeto +". Confira seus exercícios abaixo.");
+        tv_dieta.setText("Sua dieta corresponde ao Projeto " + projeto + ". Apertando o botão você consegue acessar ela.");
+
+        switch (projeto){
+            case "Ganho de Peso":
+
+                btn_exercicio.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title1);
+                        tv_conteudo.setText(R.string.conteudoExer1);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+
+                });
+                btn_dieta.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title5);
+                        tv_conteudo.setText(R.string.conteudoDieta1);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+                });
+                break;
+            case "Verão":
+                btn_exercicio.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title2);
+                        tv_conteudo.setText(R.string.conteudoExer1);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+
+                });
+                btn_dieta.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title6);
+                        tv_conteudo.setText(R.string.conteudoDieta1);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+                });
+
+                break;
+            case "Perda de Peso":
+
+                btn_exercicio.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title3);
+                        tv_conteudo.setText(R.string.conteudoExer1);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+
+                });
+                btn_dieta.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title7);
+                        tv_conteudo.setText(R.string.conteudoDieta1);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+                });
+
+                break;
+            case "Saúde":
+
+                btn_exercicio.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title4);
+                        tv_conteudo.setText(R.string.conteudoExer2);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+
+                });
+                btn_dieta.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title8);
+                        tv_conteudo.setText(R.string.conteudoDieta2);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+                });
+                break;
+        }
+
+        btn_voltar = view.findViewById(R.id.bt_voltar);
+        btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fl_home.setVisibility(View.VISIBLE);
+                ll_home.setVisibility(View.VISIBLE);
+                fl_btnPress.setVisibility(View.INVISIBLE);
+            }
+        });
 
         return view;
+
     }
 
 }
