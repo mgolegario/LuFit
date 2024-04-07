@@ -22,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+
 public class HomeFragment extends Fragment {
 
     TextView tv_nome;
@@ -37,6 +39,9 @@ public class HomeFragment extends Fragment {
     TextView tv_titulo;
     TextView tv_conteudo;
     ImageView btn_voltar;
+    Float peso;
+    Float altura;
+    String projeto;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,14 +61,21 @@ public class HomeFragment extends Fragment {
         fl_home = view.findViewById(R.id.fl_home);
         ll_home = view.findViewById(R.id.ll_home);
 
+        if (b.getString("nome") != null) {
+            String nome = b.getString("nome");
+            tv_nome.setText("Olá, " + nome);
 
-        String nome = b.getString("nome");
-        tv_nome.setText("Olá, "+ nome);
+            peso = b.getFloat("peso");
+            altura = b.getFloat("altura");
 
-        Float peso = b.getFloat("peso");
-        Float altura = b.getFloat("altura");
-
-        String projeto = b.getString("projeto");
+            projeto = b.getString("projeto");
+        }else {
+            String email = b.getString("email");
+            tv_nome.setText("Olá, " + email);
+            peso = 70F;
+            altura = 1.80F;
+            projeto = "Verão";
+        }
 
         tv_peso.setText("Você está com " + peso +" kg e mede "+altura+" metros, siga em frente com foco e determinação nos seus objetivos!");
         tv_exercicio.setText("Você está no Projeto " + projeto +". Confira seus exercícios abaixo.");
@@ -187,6 +199,32 @@ public class HomeFragment extends Fragment {
                         fl_btnPress.setVisibility(View.VISIBLE);
                     }
                 });
+                break;
+                default:
+                btn_exercicio.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tv_titulo.setText(R.string.title2);
+                    tv_conteudo.setText(R.string.conteudoExer1);
+
+                    fl_home.setVisibility(View.INVISIBLE);
+                    ll_home.setVisibility(View.INVISIBLE);
+                    fl_btnPress.setVisibility(View.VISIBLE);
+                }
+
+            });
+                btn_dieta.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_titulo.setText(R.string.title6);
+                        tv_conteudo.setText(R.string.conteudoDieta1);
+
+                        fl_home.setVisibility(View.INVISIBLE);
+                        ll_home.setVisibility(View.INVISIBLE);
+                        fl_btnPress.setVisibility(View.VISIBLE);
+                    }
+                });
+
                 break;
         }
 

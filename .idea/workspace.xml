@@ -84,7 +84,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c40c4c8-eed1-44b3-b102-a429008b79c7" name="Changes" comment="Telas:&#10;Informacoes com a home todas sincronizadas.">
+    <list default="true" id="2c40c4c8-eed1-44b3-b102-a429008b79c7" name="Changes" comment="Telas:&#10;Polimento HOME">
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -92,8 +92,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Conversa.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Conversa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/PreferencesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/PreferencesFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_preferences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_preferences.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -413,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712453633361</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Telas:&#10;Polimento HOME">
+      <option name="closed" value="true" />
+      <created>1712455332799</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712455332799</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -424,6 +436,7 @@
     <MESSAGE value="Telas:&#10;Login e Esqueci senha programados :)" />
     <MESSAGE value="Telas:&#10;Conversa FINALIZADA&#10;Sincronizando informacoes com a home" />
     <MESSAGE value="Telas:&#10;Informacoes com a home todas sincronizadas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Telas:&#10;Informacoes com a home todas sincronizadas." />
+    <MESSAGE value="Telas:&#10;Polimento HOME" />
+    <option name="LAST_COMMIT_MESSAGE" value="Telas:&#10;Polimento HOME" />
   </component>
 </project>

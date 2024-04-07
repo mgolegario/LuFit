@@ -3,7 +3,8 @@
 
     <item android:title="Home"
         android:icon="@drawable/casa_icon"
-        android:id="@+id/navhome"/>
+        android:id="@+id/navhome"
+        android:checked="true"/>
     <item android:title="Conversar"
         android:icon="@drawable/mensagem_icone"
         android:id="@+id/navconversar"/>

@@ -2,6 +2,7 @@ package com.example.lufit;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -23,7 +24,6 @@ public class Home extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,32 +35,35 @@ public class Home extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottomNavView);
         frameLayout = findViewById(R.id.frameLayout);
 
+
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
 
                 int itemId = menuItem.getItemId();
 
                 if (itemId == R.id.navhome){
-                    loadFragment(new HomeFragment());
+                    homeClicked();
                 }else if (itemId == R.id.navconversar){
-                    Intent i = new Intent(Home.this, Conversa.class);
-                    startActivity(i);
+                    conversaClicked();
                 } else if (itemId == R.id.navpreferencias){
-                    loadFragment(new PreferencesFragment() );
+                    preferenciasClicked();
                 }
 
                 return true;
             }
         });
-        loadFragment(new HomeFragment());
-
+        homeClicked();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
+
 
     private void loadFragment(Fragment fragment){
         Bundle b = getIntent().getExtras();
@@ -70,4 +73,15 @@ public class Home extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
     }
+    private void homeClicked(){
+        loadFragment(new HomeFragment());
+    }
+    private void conversaClicked(){
+        Intent i = new Intent(Home.this, Conversa.class);
+        startActivity(i);
+    }
+    private void preferenciasClicked(){
+        loadFragment(new PreferencesFragment());
+    }
+
 }

@@ -35,6 +35,7 @@ public class Conversa extends AppCompatActivity {
     Boolean podeIrHome;
     Bundle b;
     String projeto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
