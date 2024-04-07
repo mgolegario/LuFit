@@ -3,12 +3,16 @@ package com.example.lufit;
 import static android.content.Intent.getIntent;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +68,19 @@ public class HomeFragment extends Fragment {
         tv_peso.setText("Você está com " + peso +" kg e mede "+altura+" metros, siga em frente com foco e determinação nos seus objetivos!");
         tv_exercicio.setText("Você está no Projeto " + projeto +". Confira seus exercícios abaixo.");
         tv_dieta.setText("Sua dieta corresponde ao Projeto " + projeto + ". Apertando o botão você consegue acessar ela.");
+
+
+        Integer larguraProjeto = projeto.length();
+        SpannableString spannableString = new SpannableString(tv_exercicio.getText());
+        ForegroundColorSpan colorSpan = new ForegroundColorSpan(Color.rgb(82, 113, 255));
+        spannableString.setSpan(colorSpan, 21, 21+larguraProjeto, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        tv_exercicio.setText(spannableString);
+
+        SpannableString spannableString2 = new SpannableString(tv_dieta.getText());
+        ForegroundColorSpan colorSpan2 = new ForegroundColorSpan(Color.rgb(82, 113, 255));
+        spannableString2.setSpan(colorSpan2, 33, 33+larguraProjeto, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tv_dieta.setText(spannableString2);
 
         switch (projeto){
             case "Ganho de Peso":
