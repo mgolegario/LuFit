@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -22,6 +23,7 @@ public class PreferencesFragment extends Fragment {
     RadioGroup radio_group;
     RadioButton claro;
     RadioButton escuro;
+    FrameLayout gotoConta;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,8 +31,17 @@ public class PreferencesFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_preferences, container, false);
 
+
         claro = view.findViewById(R.id.rb_claro);
         escuro = view.findViewById(R.id.rb_escuro);
+        gotoConta = view.findViewById(R.id.frame_conta);
+
+        gotoConta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToCadastro();
+            }
+        });
 
         switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
             case Configuration.UI_MODE_NIGHT_YES:
@@ -59,6 +70,12 @@ public class PreferencesFragment extends Fragment {
         return view;
 
     }
-
+    public void goToCadastro()
+    {
+        Bundle b = this.getArguments();
+        Intent intent = new Intent(getActivity(), Cadastro.class);
+        intent.putExtras(b);
+        startActivity(intent);
+    }
 
 }

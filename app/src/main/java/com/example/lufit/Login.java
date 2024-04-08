@@ -1,6 +1,8 @@
 package com.example.lufit;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -18,13 +20,20 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class Login extends AppCompatActivity {
     TextView redirect_forgPass;
     ImageView bt_voltar;
     Button btn_entrar;
     EditText edt_email;
     EditText edt_senha;
-
+    DBHelper DB;
+    ArrayList<String> infos;
+    String usuario;
+    String altura;
+    String peso ;
+    String projeto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,45 +47,45 @@ public class Login extends AppCompatActivity {
         edt_email = findViewById(R.id.edt_email);
         edt_senha = findViewById(R.id.edt_senha);
         btn_entrar = findViewById(R.id.bt_entrar);
+        DB = new DBHelper(this);
+
         btn_entrar.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
 
                   String email, senha;
-
                   email = edt_email.getText().toString();
                   senha = edt_senha.getText().toString();
 
+                  if (email.equals("")||senha.equals("")){
+                      Toast.makeText(Login.this, "Por favor preencha todos os campos", Toast.LENGTH_SHORT).show();
+                  }else{
+                      Boolean checkuser = DB.checkEmailPassword(email, senha);
+                      if (checkuser == true){
+                          Toast.makeText(Login.this, "O Login foi bem sucedido", Toast.LENGTH_SHORT).show();
 
-                  Intent a = new Intent(Login.this, Home.class);
+                          SQLiteDatabase MyDB = DB.getWritableDatabase();
+                          Cursor cursor = MyDB.rawQuery("Select * from users where email = ?", new String[]{email});
+                          if (cursor.moveToFirst()) {
+                              do {
+                                  infos.add(cursor.getString(0));
+                              } while (cursor.moveToNext());
+                          }
+                          Intent a = new Intent(Login.this, Home.class);
 
-              if (i.hasExtra("email") && i.hasExtra("senha")) {
-                  Bundle b = getIntent().getExtras();
-                  String emailB = b.getString("email");
-                  String senhaB = b.getString("senha");
+                          Bundle b = new Bundle();
+                          b.putString("nome", infos.get(2));
+                          b.putString("altura", infos.get(3));
+                          b.putString("peso", infos.get(4));
+                          b.putString("projeto", infos.get(5));
+                          a.putExtras(b);
 
-                  if (email.contains("@") && email.contains(".") && senha.length() <= 8 && !email.equals(emailB) || email.equals(emailB) && senha.equals(senhaB)){
-                      a.putExtras(b);
-                      startActivity(a);
-                  }else if (senha.length()> 8){
-                      Toast.makeText(Login.this, "A senha pode ter no máximo 8 caracteres", Toast.LENGTH_SHORT).show();
-                  }else {
-                      Toast.makeText(Login.this, "O e-mail ou senha estão incorretos", Toast.LENGTH_SHORT).show();
+                          startActivity(a);
+                      }else{
+                          Toast.makeText(Login.this, "O Login falhou", Toast.LENGTH_SHORT).show();
+                      }
                   }
-              }else {
 
-                  if (email.contains("@") && email.contains(".") && senha.length() <= 8) {
-                      Bundle b2 = new Bundle();
-                      b2.putString("email", email);
-                      b2.putString("senha", senha);
-                      a.putExtras(b2);
-                      startActivity(a);
-                  } else if (senha.length() > 8) {
-                      Toast.makeText(Login.this, "A senha pode ter no máximo 8 caracteres", Toast.LENGTH_SHORT).show();
-                  } else {
-                      Toast.makeText(Login.this, "O e-mail ou senha estão incorretos", Toast.LENGTH_SHORT).show();
-                  }
-              }
                   }
 
       });

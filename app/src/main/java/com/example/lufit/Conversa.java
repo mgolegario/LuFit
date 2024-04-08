@@ -105,8 +105,8 @@ public class Conversa extends AppCompatActivity {
                             Intent i = new Intent(Conversa.this, Home.class);
                             b = new Bundle();
                             b.putString("nome", nome);
-                            b.putFloat("altura", altura);
-                            b.putFloat("peso", peso);
+                            b.putString("altura", String.valueOf(altura));
+                            b.putString("peso", String.valueOf(peso));
                             b.putString("projeto", projeto);
 
                             i.putExtras(b);
