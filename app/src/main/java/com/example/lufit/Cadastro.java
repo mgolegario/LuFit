@@ -37,19 +37,20 @@ public class Cadastro extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
 
         String nome = b.getString("nome");
-        Float altura = b.getFloat("altura");
-        Float peso = b.getFloat("peso");
+        String altura = b.getString("altura");
+        String peso = b.getString("peso");
         String projeto = b.getString("projeto");
 
         edt_email.setText(projeto + altura + peso);
 
         edt_usuario.setText(nome);
-        edt_altura.setText(altura.toString());
-        edt_peso.setText(peso.toString());
+        edt_altura.setText(altura);
+        edt_peso.setText(peso);
         edt_projeto.setText(projeto);
         btn_cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String usuario = edt_usuario.getText().toString();
                 String email = edt_email.getText().toString();
                 String senha = edt_senha.getText().toString();

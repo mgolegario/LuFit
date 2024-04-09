@@ -63,24 +63,22 @@ public class Login extends AppCompatActivity {
 
                           ArrayList<Model> arrInfos = DB.fetchData(email);
 
-                          for (int i =0; i<arrInfos.size();i++){
-                              switch (i){
-                                  case 0: usuario = arrInfos.get(i).usuario; break;
-                                  case 1: altura = arrInfos.get(i).altura; break;
-                                  case 2: peso = arrInfos.get(i).peso; break;
-                                  case 3: projeto = arrInfos.get(i).projeto; break;
 
-                              }
-                          }
+                                  usuario = arrInfos.get(0).usuario;
+                                  altura = arrInfos.get(0).altura;
+                                  peso = arrInfos.get(0).peso;
+                                 projeto = arrInfos.get(0).projeto;
+
+
                           Intent a = new Intent(Login.this, Home.class);
                             redirect_forgPass.setText(usuario + projeto + altura + peso);
 
-                         /* Bundle b = new Bundle();
+                          Bundle b = new Bundle();
                           b.putString("nome", email);
                           b.putString("altura", altura);
                           b.putString("peso", peso);
                           b.putString("projeto", projeto);
-                          a.putExtras(b);*/
+                          a.putExtras(b);
 
                           startActivity(a);
                       }else{
