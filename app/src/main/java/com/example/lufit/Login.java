@@ -1,8 +1,6 @@
 package com.example.lufit;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -12,7 +10,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,21 +61,26 @@ public class Login extends AppCompatActivity {
                       if (checkuser == true){
                           Toast.makeText(Login.this, "O Login foi bem sucedido", Toast.LENGTH_SHORT).show();
 
-                          SQLiteDatabase MyDB = DB.getWritableDatabase();
-                          Cursor cursor = MyDB.rawQuery("Select * from users where email = ?", new String[]{email});
-                          if (cursor.moveToFirst()) {
-                              do {
-                                  infos.add(cursor.getString(0));
-                              } while (cursor.moveToNext());
+                          ArrayList<Model> arrInfos = DB.fetchData(email);
+
+                          for (int i =0; i<arrInfos.size();i++){
+                              switch (i){
+                                  case 0: usuario = arrInfos.get(i).usuario; break;
+                                  case 1: altura = arrInfos.get(i).altura; break;
+                                  case 2: peso = arrInfos.get(i).peso; break;
+                                  case 3: projeto = arrInfos.get(i).projeto; break;
+
+                              }
                           }
                           Intent a = new Intent(Login.this, Home.class);
+                            redirect_forgPass.setText(usuario + projeto + altura + peso);
 
-                          Bundle b = new Bundle();
-                          b.putString("nome", infos.get(2));
-                          b.putString("altura", infos.get(3));
-                          b.putString("peso", infos.get(4));
-                          b.putString("projeto", infos.get(5));
-                          a.putExtras(b);
+                         /* Bundle b = new Bundle();
+                          b.putString("nome", email);
+                          b.putString("altura", altura);
+                          b.putString("peso", peso);
+                          b.putString("projeto", projeto);
+                          a.putExtras(b);*/
 
                           startActivity(a);
                       }else{

@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-        MyDB.execSQL("create Table users(email TEXT primary key, password TEXT, usuario TEXT, altura REAL, peso REAL, projeto TEXT)");
+        MyDB.execSQL("create Table users(email TEXT primary key, password TEXT, usuario TEXT, altura TEXT, peso TEXT, projeto TEXT)");
     }
 
     @Override
@@ -31,7 +31,7 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("drop Table if exists users");
     }
 
-    public Boolean insertData(String email, String password, String usuario, Float altura, Float peso, String projeto){
+    public Boolean insertData(String email, String password, String usuario, String altura, String peso, String projeto){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
@@ -59,9 +59,21 @@ public class DBHelper extends SQLiteOpenHelper {
         else return false;
     }
 
-    public ArrayList<String> fetchData(String email){
+    public ArrayList<Model> fetchData(String email){
     SQLiteDatabase MyDB = this.getReadableDatabase();
     Cursor cursor = MyDB.rawQuery("SELECT * FROM users where email = ?", new String[]{email});
+    ArrayList<Model> arrOutrasInfos = new ArrayList<>();
+
+        cursor.moveToNext();
+        Model infos = new Model();
+        infos.usuario = cursor.getString(2);
+        infos.altura = cursor.getString(3);
+        infos.peso = cursor.getString(4);
+        infos.projeto = cursor.getString(5);
+
+        arrOutrasInfos.add(infos);
+
+        return arrOutrasInfos;
 
     }
 }

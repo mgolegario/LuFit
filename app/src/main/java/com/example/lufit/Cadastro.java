@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Cadastro extends AppCompatActivity {
 
     Button btn_cadastro;
-    TextView edt_usuario, edt_senha, edt_email;
+    EditText edt_usuario, edt_senha, edt_email, edt_altura, edt_peso, edt_projeto;
     DBHelper DB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,9 @@ public class Cadastro extends AppCompatActivity {
         edt_usuario = findViewById(R.id.edt_usuario);
         edt_email = findViewById(R.id.edt_email_cadastro);
         edt_senha = findViewById(R.id.edt_senha_cadastro);
+        edt_altura = findViewById(R.id.edt_altura);
+        edt_peso = findViewById(R.id.edt_peso);
+        edt_projeto = findViewById(R.id.edt_plano);
         btn_cadastro = findViewById(R.id.btn_cadastro);
         DB = new DBHelper(this);
         Bundle b = getIntent().getExtras();
@@ -37,13 +41,21 @@ public class Cadastro extends AppCompatActivity {
         Float peso = b.getFloat("peso");
         String projeto = b.getString("projeto");
 
+        edt_email.setText(projeto + altura + peso);
+
         edt_usuario.setText(nome);
+        edt_altura.setText(altura.toString());
+        edt_peso.setText(peso.toString());
+        edt_projeto.setText(projeto);
         btn_cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String usuario = edt_usuario.getText().toString();
                 String email = edt_email.getText().toString();
                 String senha = edt_senha.getText().toString();
+                String altura = edt_altura.getText().toString();
+                String peso = edt_peso.getText().toString();
+                String projeto = edt_projeto.getText().toString();
 
 
                 if (usuario.equals("")||email.equals("")||senha.equals("")){

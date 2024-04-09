@@ -39,8 +39,8 @@ public class HomeFragment extends Fragment {
     TextView tv_titulo;
     TextView tv_conteudo;
     ImageView btn_voltar;
-    String peso;
-    String altura;
+    float peso;
+    float altura;
     String projeto;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,15 +61,19 @@ public class HomeFragment extends Fragment {
         fl_home = view.findViewById(R.id.fl_home);
         ll_home = view.findViewById(R.id.ll_home);
 
-        if (b.getString("nome") != null) {
+        if (b.getString("nome") != null || b.getString("peso") != null || b.getString("altura") != null|| b.getString("projeto") != null) {
             String nome = b.getString("nome");
             tv_nome.setText("Olá, " + nome);
-
-            peso = b.getString("peso");
-            altura = b.getString("altura");
-
+            peso = b.getFloat("peso");
+            altura = b.getFloat("altura");
             projeto = b.getString("projeto");
+        }else{
+            tv_nome.setText("Olá, Tudo bem?" );
+            peso = 60;
+            altura = 1.9F;
+            projeto = "Verão";
         }
+
 
 
         tv_peso.setText("Você está com " + peso +" kg e mede "+altura+" metros, siga em frente com foco e determinação nos seus objetivos!");
