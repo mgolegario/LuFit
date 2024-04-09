@@ -64,10 +64,10 @@ public class Login extends AppCompatActivity {
                           ArrayList<Model> arrInfos = DB.fetchData(email);
 
 
-                                  usuario = arrInfos.get(0).usuario;
-                                  altura = arrInfos.get(0).altura;
-                                  peso = arrInfos.get(0).peso;
-                                 projeto = arrInfos.get(0).projeto;
+                          usuario = arrInfos.get(0).usuario;
+                          altura = arrInfos.get(0).altura;
+                          peso = arrInfos.get(0).peso;
+                          projeto = arrInfos.get(0).projeto;
 
 
                           Intent a = new Intent(Login.this, Home.class);
