@@ -49,13 +49,18 @@ public class Conta extends AppCompatActivity {
         }
 
 
+btn_editar.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        edt_usuario.setEnabled(true);
+        edt_altura.setEnabled(true);
+        edt_peso.setEnabled(true);
+        edt_senha.setEnabled(true);
+        btn_ok.setVisibility(View.VISIBLE);
+        btn_editar.setVisibility(View.INVISIBLE);
+    }
+});
 
-                    edt_usuario.setEnabled(true);
-                    edt_altura.setEnabled(true);
-                    edt_peso.setEnabled(true);
-                    edt_senha.setEnabled(true);
-                    btn_ok.setVisibility(View.VISIBLE);
-                    btn_editar.setVisibility(View.INVISIBLE);
 
 
         btn_ok.setOnClickListener(new View.OnClickListener() {
