@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-        MyDB.execSQL("create Table users(email TEXT primary key, password TEXT, usuario TEXT, altura TEXT, peso TEXT, projeto TEXT)");
+        MyDB.execSQL("create Table users(email TEXT primary key, password TEXT, usuario TEXT, altura REAL, peso REAL, projeto TEXT)");
     }
 
     @Override
@@ -31,7 +31,7 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("drop Table if exists users");
     }
 
-    public Boolean insertData(String email, String password, String usuario, String altura, String peso, String projeto){
+    public Boolean insertData(String email, String password, String usuario, Float altura, Float peso, String projeto){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
@@ -44,6 +44,29 @@ public class DBHelper extends SQLiteOpenHelper {
         if (result == -1) return false;
         else return true;
     }
+    public Boolean updateData(String email, String senha, String usuario, Float altura, Float peso, String projeto){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("password", senha);
+        contentValues.put("usuario", usuario);
+        contentValues.put("altura", altura);
+        contentValues.put("peso", peso);
+        contentValues.put("projeto", projeto);
+
+        long result = MyDB.update("users",  contentValues, "email=?", new String[]{email});
+        if (result == -1) return false;
+        else return true;
+    }
+    public Boolean updateDataSenha(String email, String senha){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password", senha);
+        long result = MyDB.update("users",  contentValues, "email=?", new String[]{email});
+        if (result == -1) return false;
+        else return true;
+    }
+
 
     public Boolean checkEmail(String email) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
@@ -59,6 +82,8 @@ public class DBHelper extends SQLiteOpenHelper {
         else return false;
     }
 
+
+
     public ArrayList<Model> fetchData(String email){
     SQLiteDatabase MyDB = this.getReadableDatabase();
     Cursor cursor = MyDB.rawQuery("SELECT * FROM users where email = ?", new String[]{email});
@@ -67,8 +92,8 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.moveToNext();
         Model infos = new Model();
         infos.usuario = cursor.getString(2);
-        infos.altura = cursor.getString(3);
-        infos.peso = cursor.getString(4);
+        infos.altura = cursor.getFloat(3);
+        infos.peso = cursor.getFloat(4);
         infos.projeto = cursor.getString(5);
 
         arrOutrasInfos.add(infos);

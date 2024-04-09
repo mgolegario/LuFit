@@ -53,8 +53,9 @@
             android:layout_marginTop="3dp"
             android:background="@drawable/rounded_edittext_background"
             android:ems="10"
+            android:textColor="#404040"
             android:fontFamily="@font/lexend"
-            android:hint="Ex: fulano@gmail.com"
+            android:hint="Ex: usuario@gmail.com"
             android:inputType="textEmailAddress"
             android:textColorHint="#595959" />
 
@@ -74,6 +75,7 @@
             android:layout_marginTop="3dp"
             android:background="@drawable/rounded_edittext_background"
             android:ems="10"
+            android:textColor="#404040"
             android:fontFamily="@font/lexend"
             android:hint="Insira sua senha aqui"
             android:inputType="textPassword"

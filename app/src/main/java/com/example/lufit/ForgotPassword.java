@@ -30,6 +30,7 @@ public class ForgotPassword extends AppCompatActivity {
         bt_alterar = findViewById(R.id.bt_alterar);
         edt_email = findViewById(R.id.edt_email2);
         edt_senha = findViewById(R.id.edt_senha2);
+        DBHelper DB = new DBHelper(this);
     bt_alterar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -41,21 +42,24 @@ public class ForgotPassword extends AppCompatActivity {
 
             Intent a = new Intent(ForgotPassword.this, EmailConfirm.class);
 
-
-
-            if (email.contains("@") && email.contains(".") && senha.length() <= 8){
-                b = new Bundle();
-                b.putString("email", email);
-                b.putString("senha", senha);
-                a.putExtras(b);
-                startActivity(a);
-            }else if (senha.length()> 8){
-                Toast.makeText(ForgotPassword.this, "A senha pode ter no máximo 8 caracteres", Toast.LENGTH_SHORT).show();
-            }else {
-                Toast.makeText(ForgotPassword.this, "O e-mail ou senha estão incorretos", Toast.LENGTH_SHORT).show();
+            if (email.equals("")||senha.equals("")){
+                Toast.makeText(ForgotPassword.this, "Por favor preencha todos os campos", Toast.LENGTH_SHORT).show();
+            }else{
+                Boolean checkemail = DB.checkEmail(email);
+                if (checkemail == true){
+                    Boolean update = DB.updateDataSenha(email, senha);
+                    if (update == true){
+                        Toast.makeText(ForgotPassword.this, "A senha foi alterada com sucesso", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(ForgotPassword.this, "Não foi possível alterar a senha", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(ForgotPassword.this, "O usuário não existe", Toast.LENGTH_SHORT).show();
+                }
             }
 
         }
+
     });
 
 

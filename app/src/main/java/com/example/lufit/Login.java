@@ -28,8 +28,8 @@ public class Login extends AppCompatActivity {
     DBHelper DB;
     ArrayList<String> infos;
     String usuario;
-    String altura;
-    String peso ;
+    Float altura;
+    Float peso ;
     String projeto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,24 +62,22 @@ public class Login extends AppCompatActivity {
                           Toast.makeText(Login.this, "O Login foi bem sucedido", Toast.LENGTH_SHORT).show();
 
                           ArrayList<Model> arrInfos = DB.fetchData(email);
-
-
                           usuario = arrInfos.get(0).usuario;
                           altura = arrInfos.get(0).altura;
                           peso = arrInfos.get(0).peso;
                           projeto = arrInfos.get(0).projeto;
 
-
                           Intent a = new Intent(Login.this, Home.class);
-                            redirect_forgPass.setText(usuario + projeto + altura + peso);
 
                           Bundle b = new Bundle();
-                          b.putString("nome", email);
-                          b.putString("altura", altura);
-                          b.putString("peso", peso);
+                          b.putString("nome", usuario);
+                          b.putString("email", email);
+                          b.putString("senha", senha);
+                          b.putFloat("altura", altura);
+                          b.putFloat("peso", peso);
                           b.putString("projeto", projeto);
-                          a.putExtras(b);
 
+                          a.putExtras(b);
                           startActivity(a);
                       }else{
                           Toast.makeText(Login.this, "O Login falhou", Toast.LENGTH_SHORT).show();
@@ -89,6 +87,7 @@ public class Login extends AppCompatActivity {
                   }
 
       });
+
 
         redirect_forgPass = findViewById(R.id.tv_forgPassw);
         SpannableString conteudo= new SpannableString("Esqueci minha Senha");
@@ -107,8 +106,7 @@ public class Login extends AppCompatActivity {
   bt_voltar.setOnClickListener(new View.OnClickListener() {
    @Override
    public void onClick(View v) {
-       Intent i = new Intent(Login.this, ComecarConversa.class);
-       startActivity(i);
+       onBackPressed();
        }
   });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

@@ -7,78 +7,124 @@
     android:layout_height="match_parent"
     tools:context=".Cadastro">
 
-    <EditText
-        android:id="@+id/edt_email_cadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/edt_senha_cadastro"
-        app:layout_constraintEnd_toEndOf="@+id/edt_senha_cadastro"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edt_senha_cadastro" />
-
-    <Button
-        android:id="@+id/btn_cadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="60dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/edt_senha_cadastro"
-        app:layout_constraintTop_toBottomOf="@+id/edt_senha_cadastro" />
-
-    <EditText
-        android:id="@+id/edt_senha_cadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:ems="10"
-        android:inputType="textPassword"
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/edt_usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="157dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edt_email_cadastro"
-        app:layout_constraintStart_toStartOf="@+id/edt_email_cadastro"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/bt_voltar"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            app:srcCompat="@drawable/seta_icone" />
 
-    <EditText
-        android:id="@+id/edt_altura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="227dp" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="213dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lexend_semibold"
+            android:text="Cadastrar uma conta"
+            android:textSize="38sp" />
 
-    <EditText
-        android:id="@+id/edt_peso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="307dp" />
 
-    <EditText
-        android:id="@+id/edt_plano"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="55dp" />
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/lexend"
+            android:text="Nome"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edt_usuario"
+            android:layout_width="285dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:ems="10"
+            android:textColor="#404040"
+            android:fontFamily="@font/lexend"
+            android:hint="Ex: João da Silva"
+            android:inputType="text"
+            android:textColorHint="#595959" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lexend"
+            android:text="E-mail"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edt_email_cadastro"
+            android:layout_width="285dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:ems="10"
+            android:textColor="#404040"
+            android:fontFamily="@font/lexend"
+            android:hint="Ex: usuario@gmail.com"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#595959" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lexend"
+            android:text="Senha"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edt_senha_cadastro"
+            android:layout_width="285dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:ems="10"
+            android:textColor="#404040"
+            android:fontFamily="@font/lexend"
+            android:hint="Insira sua senha aqui"
+            android:inputType="textPassword"
+            android:textColorHint="#595959" />
+
+        <Button
+            android:id="@+id/btn_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#5271FF"
+            android:fontFamily="@font/lexend_semibold"
+            android:layout_marginTop="42dp"
+            android:layout_marginStart="-20dp"
+            android:layout_gravity="center"
+            android:text="Cadastrar"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_toLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lexend_semibold"
+            android:text="Já tem uma conta? Login"
+            android:textSize="15sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

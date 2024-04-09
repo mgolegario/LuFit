@@ -73,9 +73,18 @@ public class PreferencesFragment extends Fragment {
     public void goToCadastro()
     {
         Bundle b = this.getArguments();
-        Intent intent = new Intent(getActivity(), Cadastro.class);
-        intent.putExtras(b);
-        startActivity(intent);
+        if (b.getString("email") != null){
+            String email = b.getString("email");
+            b.putString("email", email);
+            Intent intent = new Intent(getActivity(), Conta.class);
+            intent.putExtras(b);
+            startActivity(intent);
+        }else{
+            Intent intent = new Intent(getActivity(), Cadastro.class);
+            intent.putExtras(b);
+            startActivity(intent);
+        }
+
     }
 
 }
