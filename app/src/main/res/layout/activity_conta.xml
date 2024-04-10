@@ -183,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="-20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="-54dp"
                 android:backgroundTint="#5271FF"
                 android:fontFamily="@font/lexend_semibold"
                 android:text="OK"

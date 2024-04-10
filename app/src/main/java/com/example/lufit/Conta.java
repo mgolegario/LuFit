@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class Conta extends AppCompatActivity {
 
     EditText edt_usuario, edt_altura, edt_peso, edt_email, edt_senha;
     Button btn_editar, btn_ok;
+    ImageView bt_voltar;
     DBHelper DB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,13 @@ btn_editar.setOnClickListener(new View.OnClickListener() {
             }
         });
 
+        bt_voltar = findViewById(R.id.bt_voltar);
+        bt_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

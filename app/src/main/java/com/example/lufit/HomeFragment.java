@@ -1,14 +1,10 @@
 package com.example.lufit;
 
-import static android.content.Intent.getIntent;
-
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -20,9 +16,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
-
-import java.lang.reflect.Array;
 
 public class HomeFragment extends Fragment {
 
@@ -34,7 +29,7 @@ public class HomeFragment extends Fragment {
     Button btn_dieta;
     FragmentManager fragmentManager;
     FrameLayout fl_btnPress;
-    LinearLayout ll_home;
+    ScrollView ll_home;
     FrameLayout fl_home;
     TextView tv_titulo;
     TextView tv_conteudo;

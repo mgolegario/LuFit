@@ -9,28 +9,27 @@
     <FrameLayout
         android:id="@+id/fl_btnPress"
         android:layout_width="match_parent"
-        android:layout_height="695dp"
+        android:layout_height="700dp"
         android:visibility="invisible">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginBottom="10dp"
-                android:paddingTop="30dp"
-                >
+                android:orientation="horizontal"
+                android:paddingTop="30dp">
 
                 <ImageView
                     android:id="@+id/bt_voltar"
                     android:layout_width="30dp"
                     android:layout_height="33dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
                     android:src="@drawable/seta_icone" />
 
                 <TextView
@@ -44,190 +43,198 @@
                     android:textSize="26sp"
                     android:textStyle="normal" />
             </LinearLayout>
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_conteudo"
-                android:layout_width="290dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/lexend"
-                android:text="Teste teste teste teste teste teste"
+                android:layout_height="match_parent">
 
-                android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_conteudo"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:fontFamily="@font/lexend"
+                        android:text="Teste teste teste teste teste teste"
+
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </ScrollView>
+
         </LinearLayout>
-</ScrollView>
-</LinearLayout>
+
     </FrameLayout>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/ll_home"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:id="@+id/fl_home"
-            android:layout_width="match_parent"
-            android:layout_height="96dp">
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="238dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_data"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.8"
-                    android:fontFamily="@font/lexend_semibold"
-                    android:text="Terça-feira, 26/03"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/tv_nome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/lexend_semibold"
-                    android:maxWidth="210dp"
-                    android:text="Olá, Usuário"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="278dp"
-                android:layout_marginTop="50dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="75dp"
-                    android:layout_height="45dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/logo1" />
-            </LinearLayout>
-
-        </FrameLayout>
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:id="@+id/ll_home"
+            android:id="@+id/ll_home1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingBottom="20dp">
-
+            android:orientation="vertical">
 
             <FrameLayout
-                android:layout_width="303dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/rounded_frame_bg"
+                android:id="@+id/fl_home"
+                android:layout_width="match_parent"
+                android:layout_height="96dp">
 
-                android:padding="14dp">
-
-                <TextView
-                    android:id="@+id/tv_peso"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="238dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lexend_semibold"
-                    android:maxWidth="250dp"
-                    android:textColor="#2E2E2E"
-                    android:textSize="19sp" />
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="303dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/rounded_frame_bg"
-                android:padding="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tv_exercicios"
+                        android:id="@+id/tv_data"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:alpha="0.8"
                         android:fontFamily="@font/lexend_semibold"
-                        android:maxWidth="290dp"
-                        android:textColor="#2E2E2E"
-                        android:textSize="19sp" />
+                        android:text="Terça-feira, 26/03"
+                        android:textSize="18sp" />
 
-                    <Button
-                        android:id="@+id/btn_exercicios"
+                    <TextView
+                        android:id="@+id/tv_nome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:backgroundTint="@color/lufitblue"
                         android:fontFamily="@font/lexend_semibold"
-                        android:text="Ver Exercícios"
-                        android:textColor="#FFFFFF" />
+                        android:maxWidth="210dp"
+                        android:text="Olá, Usuário"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="303dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/rounded_frame_bg"
-                android:padding="10dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_width="75dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="278dp"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/tv_dieta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lexend_semibold"
-                        android:maxWidth="290dp"
-                        android:textColor="#2E2E2E"
-                        android:textSize="19sp" />
-
-                    <Button
-                        android:id="@+id/btn_dieta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:backgroundTint="@color/lufitblue"
-                        android:fontFamily="@font/lexend_semibold"
-                        android:text="Ver Dieta"
-                        android:textColor="#FFFFFF" />
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/logo1" />
                 </LinearLayout>
 
             </FrameLayout>
 
+            <LinearLayout
+                android:id="@+id/ll_home2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+
+                <FrameLayout
+                    android:layout_width="303dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/rounded_frame_bg"
+
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/tv_peso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:maxWidth="250dp"
+                        android:textColor="#2E2E2E"
+                        android:textSize="19sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="303dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_frame_bg"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_exercicios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/lexend_semibold"
+                            android:maxWidth="290dp"
+                            android:textColor="#2E2E2E"
+                            android:textSize="19sp" />
+
+                        <Button
+                            android:id="@+id/btn_exercicios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/lufitblue"
+                            android:fontFamily="@font/lexend_semibold"
+                            android:text="Ver Exercícios"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="303dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_frame_bg"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_dieta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexend_semibold"
+                            android:maxWidth="290dp"
+                            android:textColor="#2E2E2E"
+                            android:textSize="19sp" />
+
+                        <Button
+                            android:id="@+id/btn_dieta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/lufitblue"
+                            android:fontFamily="@font/lexend_semibold"
+                            android:text="Ver Dieta"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 
 </FrameLayout>

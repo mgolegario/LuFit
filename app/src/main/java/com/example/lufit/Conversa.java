@@ -59,41 +59,66 @@ public class Conversa extends AppCompatActivity {
             public void onClick(View v) {
                 String textoUsuario = input_usuario.getText().toString();
 
-                list.add(new RvClass(RvClass.LAYOUT_UM,textoUsuario));
 
-                contador_msg ++;
-                input_usuario.setText("");
+                if (!input_usuario.getText().toString().equals("")) {
+                    list.add(new RvClass(RvClass.LAYOUT_UM, textoUsuario));
+                    contador_msg++;
 
-                switch (contador_msg){
-                    case 1: nome= textoUsuario; input_usuario.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL); break;
-                    case 2: altura = Float.parseFloat(textoUsuario);break;
-                    case 3: peso = Float.parseFloat(textoUsuario);break;
-                }
 
-                switch (contador_msg){
+                    input_usuario.setText("");
 
-                    case 1: list.add(new RvClass(RvClass.LAYOUT_DOIS,getString(R.string.pergunta2)));break;
-                    case 2: list.add(new RvClass(RvClass.LAYOUT_DOIS,getString(R.string.pergunta3)));break;
-                    case 3:
-                        float IMC;
-                        IMC = (float) (peso / Math.pow(altura,2));
+                    switch (contador_msg) {
 
-                        if (IMC < 18.5){
-                            list.add(new RvClass(RvClass.LAYOUT_DOIS,getString(R.string.IMCamarelo)));
-                            projeto = "Ganho de Peso";
-                        } else if (IMC <= 24.9){
-                            list.add(new RvClass(RvClass.LAYOUT_DOIS,getString(R.string.IMCverde)));
-                            projeto = "Verão";
-                        } else if (IMC <= 30) {
-                            list.add(new RvClass(RvClass.LAYOUT_DOIS,getString(R.string.IMClaranja)));
-                            projeto = "Perda de Peso";
-                        } else {
-                            list.add(new RvClass(RvClass.LAYOUT_DOIS,getString(R.string.IMCvermelho)));
-                            projeto = "Saúde";
-                        }
-                        list.add(new RvClass(RvClass.LAYOUT_DOIS,getString(R.string.despedida)));
-                        podeIrHome = true;
-                        break;
+                        case 1:
+                            nome = textoUsuario;
+                            input_usuario.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                            break;
+                        case 2:
+                            altura = Float.parseFloat(textoUsuario);
+                            if (altura > 2.5F) {
+
+                                list.add(new RvClass(RvClass.LAYOUT_DOIS, "Parece que você colocou a altura errada! Tente novamente"));
+                                contador_msg--;
+                            }
+                            break;
+                        case 3:
+                            peso = Float.parseFloat(textoUsuario);
+                            if (peso < 10F) {
+                                list.add(new RvClass(RvClass.LAYOUT_DOIS, "Parece que o peso que você colocou está errado! Tente novamente"));
+                                contador_msg--;
+                            }
+                            break;
+                    }
+
+                    switch (contador_msg) {
+
+                        case 1:
+                            list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.pergunta2)));
+                            break;
+                        case 2:
+                            list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.pergunta3)));
+                            break;
+                        case 3:
+                            float IMC;
+                            IMC = (float) (peso / Math.pow(altura, 2));
+
+                            if (IMC < 18.5) {
+                                list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.IMCamarelo)));
+                                projeto = "Ganho de Peso";
+                            } else if (IMC <= 24.9) {
+                                list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.IMCverde)));
+                                projeto = "Verão";
+                            } else if (IMC <= 30) {
+                                list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.IMClaranja)));
+                                projeto = "Perda de Peso";
+                            } else {
+                                list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.IMCvermelho)));
+                                projeto = "Saúde";
+                            }
+                            list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.despedida)));
+                            podeIrHome = true;
+                            break;
+                    }
                 }
 
                 if (podeIrHome){
