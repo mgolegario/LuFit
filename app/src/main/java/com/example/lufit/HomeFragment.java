@@ -19,6 +19,9 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class HomeFragment extends Fragment {
 
     TextView tv_nome;
@@ -37,6 +40,8 @@ public class HomeFragment extends Fragment {
     Float peso;
     Float altura;
     String projeto;
+    TextView tv_data;
+    String diaPorExtenso;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,12 +54,30 @@ public class HomeFragment extends Fragment {
         btn_exercicio = view.findViewById(R.id.btn_exercicios);
         tv_dieta = view.findViewById(R.id.tv_dieta);
         btn_dieta = view.findViewById(R.id.btn_dieta);
-
+        tv_data = view.findViewById(R.id.tv_data);
         fl_btnPress = view.findViewById(R.id.fl_btnPress);
         tv_titulo = view.findViewById(R.id.tv_titulo);
         tv_conteudo = view.findViewById(R.id.tv_conteudo);
         fl_home = view.findViewById(R.id.fl_home);
         ll_home = view.findViewById(R.id.ll_home);
+        Date calendar = Calendar.getInstance().getTime();
+
+        int diaSemana = calendar.getDay();
+
+        switch (diaSemana){
+            case 0: diaPorExtenso = "Domingo";break;
+            case 1: diaPorExtenso = "Segunda-feira";break;
+            case 2: diaPorExtenso = "Terça-feira";break;
+            case 3: diaPorExtenso = "Quarta-feira";break;
+            case 4: diaPorExtenso = "Quinta-feira";break;
+            case 5: diaPorExtenso = "Sexta-feira";break;
+            case 6: diaPorExtenso = "Sábado";break;
+
+        }
+        int diaMes = calendar.getDate();
+        int mes = calendar.getMonth() + 1;
+
+        tv_data.setText(diaPorExtenso + ", "+ diaMes + "/" + mes);
 
         if (b.getString("nome") != null || b.getString("peso") != null || b.getString("altura") != null|| b.getString("projeto") != null) {
             String nome = b.getString("nome");
