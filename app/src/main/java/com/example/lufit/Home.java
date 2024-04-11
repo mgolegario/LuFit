@@ -23,6 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Home extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
+    Boolean logou = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,8 +87,16 @@ public class Home extends AppCompatActivity {
         loadFragment(new HomeFragment());
     }
     private void conversaClicked(){
-        Intent i = new Intent(Home.this, Conversa.class);
-        startActivity(i);
+        Bundle b = getIntent().getExtras();
+        if (b.getString("email")!= null) {
+            logou = true;
+            b.putBoolean("logou", logou);
+            Intent i = new Intent(Home.this, Conversa.class);
+            i.putExtras(b);
+            startActivity(i);
+        }else{
+            finish();
+        }
     }
     private void preferenciasClicked(){
         loadFragment(new PreferencesFragment());

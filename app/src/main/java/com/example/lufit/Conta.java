@@ -104,7 +104,9 @@ btn_editar.setOnClickListener(new View.OnClickListener() {
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent i = new Intent(Conta.this, Home.class);
+                i.putExtras(b);
+                startActivity(i);
             }
         });
 
