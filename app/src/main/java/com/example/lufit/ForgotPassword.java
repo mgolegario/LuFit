@@ -1,6 +1,8 @@
 package com.example.lufit;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,8 +42,6 @@ public class ForgotPassword extends AppCompatActivity {
             email = edt_email.getText().toString();
             senha = edt_senha.getText().toString();
 
-            Intent a = new Intent(ForgotPassword.this, EmailConfirm.class);
-
             if (email.equals("")||senha.equals("")){
                 Toast.makeText(ForgotPassword.this, "Por favor preencha todos os campos", Toast.LENGTH_SHORT).show();
             }else{
@@ -65,6 +65,9 @@ public class ForgotPassword extends AppCompatActivity {
 
 
         bt_voltar = findViewById(R.id.bt_voltar);
+        if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
+            bt_voltar.setColorFilter(Color.argb(255, 202, 196, 208));
+        }
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

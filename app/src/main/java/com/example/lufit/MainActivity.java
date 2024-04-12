@@ -1,6 +1,7 @@
 package com.example.lufit;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.TypefaceSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +26,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     TextView txtFormat;
     Button btn_comecar;
+    ImageView lufit_icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        lufit_icon = findViewById(R.id.lufitEscuro);
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                lufit_icon.setImageDrawable(getDrawable(R.drawable.logo2));
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                lufit_icon.setImageDrawable(getDrawable(R.drawable.logo1));
+                break;
+        }
 
         txtFormat = findViewById(R.id.textView1);
         String texto = "LuFit, o app ligado na sua saúde";

@@ -1,6 +1,8 @@
 package com.example.lufit;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -167,6 +169,9 @@ public class Conversa extends AppCompatActivity {
                     }
                 });
             }
+        if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
+            bt_voltar.setColorFilter(Color.argb(255, 202, 196, 208));
+        }
             adapter = new Adapter(list, Conversa.this);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.setAdapter(adapter);

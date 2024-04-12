@@ -1,7 +1,9 @@
 package com.example.lufit;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -92,6 +94,9 @@ public class Cadastro extends AppCompatActivity {
 
 
         bt_voltar = findViewById(R.id.bt_voltar);
+        if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
+            bt_voltar.setColorFilter(Color.argb(255, 202, 196, 208));
+        }
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

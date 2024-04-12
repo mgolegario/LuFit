@@ -1,8 +1,10 @@
 package com.example.lufit;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -42,6 +44,7 @@ public class HomeFragment extends Fragment {
     String projeto;
     TextView tv_data;
     String diaPorExtenso;
+    ImageView lufit_icon;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -244,7 +247,22 @@ public class HomeFragment extends Fragment {
                 break;
         }
 
+
+        lufit_icon = view.findViewById(R.id.lufitEscuro2);
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                lufit_icon.setImageDrawable(AppCompatResources.getDrawable(requireContext(),R.drawable.logo2));
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                lufit_icon.setImageDrawable(AppCompatResources.getDrawable(requireContext(),R.drawable.logo1));
+                break;
+        }
+
+
         btn_voltar = view.findViewById(R.id.bt_voltar);
+        if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
+            btn_voltar.setColorFilter(Color.argb(255, 202, 196, 208));
+        }
         btn_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,6 +1,8 @@
 package com.example.lufit;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -101,6 +103,9 @@ btn_editar.setOnClickListener(new View.OnClickListener() {
         });
 
         bt_voltar = findViewById(R.id.bt_voltar);
+        if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
+            bt_voltar.setColorFilter(Color.argb(255, 202, 196, 208));
+        }
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
