@@ -89,13 +89,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c40c4c8-eed1-44b3-b102-a429008b79c7" name="Changes" comment="TUDO FINALIZADO&#10;APENAS PEQUENOS AJUSTES">
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+    <list default="true" id="2c40c4c8-eed1-44b3-b102-a429008b79c7" name="Changes" comment="APP FINALIZADO&#10;PEQUENOS AJUSTES&#10;- Conversa quando vc já esta logado a mensagem muda&#10;-Conversa com o botão voltar mudando o intent de acordo com a conversa&#10;- CORRIGIDO: Apos cadastar e apertar voltar ele pedia pra cadastrar novamente&#10;-Conversa depois de vc acabar a conversa ele lembra as mensagens, ou seja, a atividade não é finalizada&#10;- Conversa apos acabar a conversa o usuário é impossibilitado de mandar mais mensagens">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Conta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Conversa.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Conversa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lufit/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_conversa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_conversa.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -487,7 +483,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712714036878</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="APP FINALIZADO&#10;PEQUENOS AJUSTES&#10;- Conversa quando vc já esta logado a mensagem muda&#10;-Conversa com o botão voltar mudando o intent de acordo com a conversa&#10;- CORRIGIDO: Apos cadastar e apertar voltar ele pedia pra cadastrar novamente&#10;-Conversa depois de vc acabar a conversa ele lembra as mensagens, ou seja, a atividade não é finalizada&#10;- Conversa apos acabar a conversa o usuário é impossibilitado de mandar mais mensagens">
+      <option name="closed" value="true" />
+      <created>1712879184908</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712879184908</updated>
+    </task>
+    <task id="LOCAL-00027" summary="APP FINALIZADO&#10;PEQUENOS AJUSTES&#10;- Conversa quando vc já esta logado a mensagem muda&#10;-Conversa com o botão voltar mudando o intent de acordo com a conversa&#10;- CORRIGIDO: Apos cadastar e apertar voltar ele pedia pra cadastrar novamente&#10;-Conversa depois de vc acabar a conversa ele lembra as mensagens, ou seja, a atividade não é finalizada&#10;- Conversa apos acabar a conversa o usuário é impossibilitado de mandar mais mensagens">
+      <option name="closed" value="true" />
+      <created>1712879210109</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712879210109</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -504,6 +516,7 @@
     <MESSAGE value="Telas:&#10;Db arrumado e tela de conta 90% concluida" />
     <MESSAGE value="Telas:&#10;Db arrumado e tela de conta concluida" />
     <MESSAGE value="TUDO FINALIZADO&#10;APENAS PEQUENOS AJUSTES" />
-    <option name="LAST_COMMIT_MESSAGE" value="TUDO FINALIZADO&#10;APENAS PEQUENOS AJUSTES" />
+    <MESSAGE value="APP FINALIZADO&#10;PEQUENOS AJUSTES&#10;- Conversa quando vc já esta logado a mensagem muda&#10;-Conversa com o botão voltar mudando o intent de acordo com a conversa&#10;- CORRIGIDO: Apos cadastar e apertar voltar ele pedia pra cadastrar novamente&#10;-Conversa depois de vc acabar a conversa ele lembra as mensagens, ou seja, a atividade não é finalizada&#10;- Conversa apos acabar a conversa o usuário é impossibilitado de mandar mais mensagens" />
+    <option name="LAST_COMMIT_MESSAGE" value="APP FINALIZADO&#10;PEQUENOS AJUSTES&#10;- Conversa quando vc já esta logado a mensagem muda&#10;-Conversa com o botão voltar mudando o intent de acordo com a conversa&#10;- CORRIGIDO: Apos cadastar e apertar voltar ele pedia pra cadastrar novamente&#10;-Conversa depois de vc acabar a conversa ele lembra as mensagens, ou seja, a atividade não é finalizada&#10;- Conversa apos acabar a conversa o usuário é impossibilitado de mandar mais mensagens" />
   </component>
 </project>
