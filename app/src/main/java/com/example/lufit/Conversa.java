@@ -52,6 +52,7 @@ public class Conversa extends AppCompatActivity {
         if (bundleLogou != null) {
             list.add(new RvClass(RvClass.LAYOUT_DOIS, "Parece que você já falou comigo antes, então não vai precisar da minha ajuda. Vou voltar a nadar, qualquer coisa da um grito!"));
             input_usuario.setEnabled(false);
+            btn_enviar.setEnabled(false);
         }else {
 
             list.add(new RvClass(RvClass.LAYOUT_DOIS, getString(R.string.introducao)));
@@ -129,6 +130,7 @@ public class Conversa extends AppCompatActivity {
 
                     if (podeIrHome) {
                         input_usuario.setEnabled(false);
+                        btn_enviar.setEnabled(false);
                         bt_voltar = findViewById(R.id.bt_voltar);
                         bt_voltar.setOnClickListener(new View.OnClickListener() {
                             @Override
