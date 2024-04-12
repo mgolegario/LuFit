@@ -52,6 +52,7 @@ public class Conversa extends AppCompatActivity {
         if (bundleLogou != null) {
             list.add(new RvClass(RvClass.LAYOUT_DOIS, "Parece que você já falou comigo antes, então não vai precisar da minha ajuda. Vou voltar a nadar, qualquer coisa da um grito!"));
             input_usuario.setEnabled(false);
+            btn_enviar = findViewById(R.id.btn_enviarMsg);
             btn_enviar.setEnabled(false);
         }else {
 
